@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.active{
+    color: #00c3c7;
+}
+
+.animation-delay-0 {
+  animation-delay: 0ms;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
