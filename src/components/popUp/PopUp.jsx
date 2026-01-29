@@ -5,23 +5,29 @@ import emailjs from "@emailjs/browser";
 const PopUp = ({ orderPopup, setOrderPopup }) => {
   const formRef = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+const sendEmail = (e) => {
+  e.preventDefault();
 
-    emailjs.sendForm(
-      "service_lyivteg",
-      "template_usacbdl",
-      formRef.current,
-      "1QVhk0I5iBd7eE5Qo"
-    )
-    .then(() => {
-      alert("Order details sent to email!");
-      setOrderPopup(false);
-    })
-    .catch(() => {
-      alert("Something went wrong!");
-    });
-  };
+  emailjs.sendForm(
+    "service_lyivteg",
+    "template_usacbdl",
+    formRef.current,
+    "1QVhk0I5iBd7eE5Qo"
+  )
+  .then(() => {
+    alert("Order details sent to email!");
+    setOrderPopup(false);
+  })
+  .catch((error) => {
+    if (error.text && error.text.includes("Invalid")) {
+      alert("Invalid email address! Please enter a correct email.");
+    } else {
+      alert("Something went wrong! Please try again.");
+    }
+    console.error("EmailJS Error:", error);
+  });
+};
+
 
   return (
     <>
