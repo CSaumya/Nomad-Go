@@ -47,7 +47,6 @@ const PopUp = ({ orderPopup, setOrderPopup }) => {
                 required
                 className="w-full rounded-full border px-2 py-1 mb-4"
               />
-
               <input
                 type="email"
                 name="email"
@@ -55,7 +54,6 @@ const PopUp = ({ orderPopup, setOrderPopup }) => {
                 required
                 className="w-full rounded-full border px-2 py-1 mb-4"
               />
-
               <input
                 type="text"
                 name="address"
@@ -63,12 +61,9 @@ const PopUp = ({ orderPopup, setOrderPopup }) => {
                 required
                 className="w-full rounded-full border px-2 py-1 mb-4"
               />
-
               <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="bg-gradient-to-r from-[#3c5cdc] to-[#00c3c7] hover:scale-105 duration-200 text-white py-1 px-4 rounded-full"
-                >
+                <button type="submit"
+                  className="bg-gradient-to-r from-[#3c5cdc] to-[#00c3c7] hover:scale-105 duration-200 text-white py-1 px-4 rounded-full">
                   Book Now
                 </button>
               </div>
